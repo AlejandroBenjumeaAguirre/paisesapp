@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-
+import { RouterModule } from '@angular/router';
 
 import { PorCapitalComponent } from './pages/por-capital/por-capital.component';
 import { PorPaisComponent } from './pages/por-pais/por-pais.component';
 import { PorRegionComponent } from './pages/por-region/por-region.component';
 import { VerPaisComponent } from './pages/ver-pais/ver-pais.component';
-
-
+import { PaisTableComponent } from './components/pais-table/pais-table.component';
+import { SearchComponent } from './components/search/search.component';
 
 
 @NgModule({
@@ -16,7 +16,9 @@ import { VerPaisComponent } from './pages/ver-pais/ver-pais.component';
     PorCapitalComponent,
     PorPaisComponent,
     PorRegionComponent,
-    VerPaisComponent
+    VerPaisComponent,
+    PaisTableComponent,
+    SearchComponent
   ],
   exports: [
     PorCapitalComponent,
@@ -26,7 +28,8 @@ import { VerPaisComponent } from './pages/ver-pais/ver-pais.component';
   ],
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    RouterModule
   ]
 })
 export class PaisModule { }

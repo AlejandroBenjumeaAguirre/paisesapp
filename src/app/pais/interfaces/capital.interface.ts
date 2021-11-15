@@ -1,4 +1,4 @@
-export interface Country {
+export interface Capital {
   name: Name;
   tld: string[];
   cca2: string;
@@ -33,6 +33,7 @@ export interface Country {
   coatOfArms: CoatOfArms;
   startOfWeek: string;
   capitalInfo: CapitalInfo;
+  postalCode: PostalCode;
 }
 
 export interface CapitalInfo {
@@ -50,10 +51,10 @@ export interface CoatOfArms {
 }
 
 export interface Currencies {
-  COP: Cop;
+  PEN: Pen;
 }
 
-export interface Cop {
+export interface Pen {
   name: string;
   symbol: string;
 }
@@ -78,6 +79,8 @@ export interface Idd {
 }
 
 export interface Languages {
+  aym: string;
+  que: string;
   spa: string;
 }
 
@@ -93,10 +96,17 @@ export interface Name {
 }
 
 export interface NativeName {
+  aym: Translation;
+  que: Translation;
   spa: Translation;
 }
 
 export interface Translation {
   official: string;
   common: string;
+}
+
+export interface PostalCode {
+  format: string;
+  regex: string;
 }
