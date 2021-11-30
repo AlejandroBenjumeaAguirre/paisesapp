@@ -24,9 +24,11 @@ export class VerPaisComponent implements OnInit {
     this.activateRout.params
       .pipe(
         switchMap( ({id}) => this.paisService.getPaisPorId(id)),
-        tap( console.log )
+        tap( (console.log) )
       )
-      .subscribe( pais => this.pais = pais[0]);
+      .subscribe( pais => {
+        console.log(pais);
+        this.pais = pais; });
 
     /* this.activateRout.params
       .subscribe(({id}) => {
